@@ -4,7 +4,6 @@ import 'app_colors.dart';
 class AppTheme {
   AppTheme._();
 
-  /// LIGHT THEME
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     primaryColor: AppColors.themeColor,
@@ -35,7 +34,6 @@ class AppTheme {
     ),
   );
 
-  /// DARK THEME
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     primaryColor: AppColors.themeColor,

@@ -27,7 +27,6 @@ class CategoryProvider extends ChangeNotifier {
 
     if (response.isSuccess && response.body != null) {
 
-      /// ✅ FIX (IMPORTANT)
       _categories = response.body?["data"]?["results"] ?? [];
 
       notifyListeners();

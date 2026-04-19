@@ -26,7 +26,7 @@ class ProductDetailsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            /// IMAGE
+
             SizedBox(
               height: 200,
               width: double.infinity,
@@ -40,7 +40,7 @@ class ProductDetailsScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            /// TITLE
+
             Text(
               product["title"] ?? "",
               style: const TextStyle(
@@ -51,7 +51,7 @@ class ProductDetailsScreen extends StatelessWidget {
 
             const SizedBox(height: 10),
 
-            /// PRICE
+
             Text(
               "\$${product["price"]}",
               style: TextStyle(
@@ -63,16 +63,15 @@ class ProductDetailsScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            /// DESCRIPTION
+
             Text(product["description"] ?? ""),
 
             const Spacer(),
 
-            /// BUTTONS
             Row(
               children: [
 
-                /// ADD TO CART
+
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {
@@ -91,7 +90,6 @@ class ProductDetailsScreen extends StatelessWidget {
 
                 const SizedBox(width: 10),
 
-                /// WISHLIST
                 IconButton(
                   onPressed: () {
                     context

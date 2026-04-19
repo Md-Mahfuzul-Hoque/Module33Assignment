@@ -23,9 +23,7 @@ class ProductProvider extends ChangeNotifier {
   int? _minPrice;
   int? _maxPrice;
 
-  /// =========================
-  /// GET PRODUCTS
-  /// =========================
+
   Future<void> getProducts({
     bool refresh = false,
     String search = "",
@@ -78,7 +76,7 @@ class ProductProvider extends ChangeNotifier {
     }
   }
 
-  /// LOAD MORE
+
   Future<void> loadMore() async {
 
     if (_isLoadMore || !_hasMore) return;

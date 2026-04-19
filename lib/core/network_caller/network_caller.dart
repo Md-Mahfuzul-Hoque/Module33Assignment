@@ -4,7 +4,6 @@ import 'network_response.dart';
 
 class NetworkCaller {
 
-  /// POST REQUEST
   static Future<NetworkResponse> postRequest(
       String url, {
         Map<String, dynamic>? body,
@@ -42,7 +41,6 @@ class NetworkCaller {
     }
   }
 
-  /// GET REQUEST
   static Future<NetworkResponse> getRequest(
       String url, {
         String? token,

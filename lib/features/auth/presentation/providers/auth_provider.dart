@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../app/controllers/auth_controller.dart';
 import '../../../../app/urls.dart';
 import '../../../../core/network_caller/network_caller.dart';
@@ -13,9 +12,6 @@ class AuthProvider extends ChangeNotifier {
   String? _error;
   String? get error => _error;
 
-  /// =========================
-  /// LOGIN
-  /// =========================
   Future<bool> login(String email, String password) async {
 
     _isLoading = true;
@@ -37,7 +33,6 @@ class AuthProvider extends ChangeNotifier {
 
     if (response.isSuccess && response.body != null) {
 
-      /// token extract (API অনুযায়ী adjust লাগতে পারে)
       final token = response.body?["token"];
 
       if (token != null) {
@@ -53,15 +48,13 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// =========================
-  /// SIGNUP
-  /// =========================
+
   Future<bool> signup({
     required String email,
     required String password,
     required String firstName,
     required String lastName,
-    required String phone, // (UI use করে, API use করে না)
+    required String phone,
   }) async {
 
     _isLoading = true;
@@ -74,7 +67,6 @@ class AuthProvider extends ChangeNotifier {
         "password": password,
         "firstName": firstName,
         "lastName": lastName,
-        // ❌ mobile remove করা হয়েছে
       },
     );
 
@@ -93,9 +85,7 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// =========================
-  /// LOGOUT
-  /// =========================
+
   Future<void> logout() async {
     await AuthController.logout();
   }

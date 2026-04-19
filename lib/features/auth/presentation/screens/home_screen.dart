@@ -32,7 +32,6 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
 
-            /// SEARCH BAR
             TextField(
               decoration: InputDecoration(
                 hintText: "Search Product",
@@ -42,7 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 20),
 
-            /// FEATURE CARD
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),
@@ -72,7 +70,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 20),
 
-            /// BUTTON
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(

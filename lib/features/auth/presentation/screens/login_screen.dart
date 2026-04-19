@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../../../../app/extensions/utils_extension.dart';
 import '../../../../app/validators.dart';
 import '../../../../features/shared/presentation/widgets/snack_bar_message.dart';
@@ -53,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 24),
 
-                /// EMAIL
+
                 TextFormField(
                   controller: emailCtrl,
                   keyboardType: TextInputType.emailAddress,
@@ -65,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 12),
 
-                /// PASSWORD
+
                 TextFormField(
                   controller: passCtrl,
                   obscureText: true,
@@ -77,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 20),
 
-                /// LOGIN BUTTON
+
                 Consumer<AuthProvider>(
                   builder: (context, authProvider, _) {
 
@@ -101,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             );
 
                             if (success) {
-                              /// ✅ MAIN NAVIGATION (Phase 9)
+
                               Navigator.pushReplacementNamed(
                                 context,
                                 "/main",
@@ -122,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 16),
 
-                /// SIGNUP
+
                 Center(
                   child: TextButton(
                     onPressed: () {

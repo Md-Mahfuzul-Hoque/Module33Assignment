@@ -27,7 +27,7 @@ class ProductProvider extends ChangeNotifier {
 
     if (response.isSuccess && response.body != null) {
 
-      /// ✅ FIX (IMPORTANT)
+
       _products = response.body?["data"]?["results"] ?? [];
 
       notifyListeners();

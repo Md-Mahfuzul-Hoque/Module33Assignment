@@ -29,7 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
       context.read<CategoryProvider>().getCategories();
     });
 
-    /// 🔥 pagination trigger
     _scrollController.addListener(() {
       if (_scrollController.position.pixels ==
           _scrollController.position.maxScrollExtent) {
@@ -49,7 +48,6 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
 
-            /// 🔍 SEARCH
             TextField(
               controller: searchCtrl,
               onChanged: (value) {
@@ -68,7 +66,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 16),
 
-            /// PRODUCT LIST + LOAD MORE
             Expanded(
               child: SingleChildScrollView(
                 controller: _scrollController,
